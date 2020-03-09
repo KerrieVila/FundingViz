@@ -1,0 +1,33 @@
+.bar {
+  fill: orange;
+}
+
+.axis path.domain, .axis line {
+    fill: none;
+    stroke: #fff;
+  }
+
+.domain {
+  fill: none;
+  stroke: #fff;
+}
+
+.header{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.radio{
+	text-align: center;
+  margin-left: 10px;
+}
+
+.row{
+  margin: auto;
+  text-align: center;
+}
+
+.label{
+  text-anchor: middle;
+}
