@@ -15,18 +15,18 @@
 <div class='container'>
   <div class="header">
   	<h3>Total VC funding per country 2019 (per million US dollars)</h3>
-  	<div class='row' style="width: 255px;">
-  					<div class='radio'>
-  						<label class='radio-inline'>
-  							<input type="radio" name="gender" value="africa" onclick='change(this.value)' checked> Africa Only
-  						</label>
-  						<label class='radio-inline'>
-  							<input type="radio" name="gender" value="both" onclick='change(this.value)'> Compare to US
-  						</label>
-  					</div>
+  	<div class='row' style="width: 195px;">
+			<div class='radio' style="color:#696969; font-size: 12px;">
+				<label class='radio-inline' style="margin-right: 10px;">
+					<input type="radio" name="gender" value="africa" onclick='change(this.value)' checked> Africa Only
+				</label>
+				<label class='radio-inline'>
+					<input type="radio" name="gender" value="both" onclick='change(this.value)'> Compare to US
+				</label>
+			</div>
   	</div>
   </div>
-	<svg class='chart'></svg>
+	<svg class='chart' style = "display: block; margin: auto;"></svg>
 </div>
 </body>
 
@@ -185,6 +185,8 @@ function update(data){
 					return (height - yChart(d.funding)) - 15;
 				})
 		  .attr("dy", ".75em")
+			.style("font-size", "12px")
+			.style ("fill", "#696969")
 		  .text(function(d) { return d.funding; });
 
 			//labels.exit().remove();
@@ -196,13 +198,14 @@ function update(data){
 	//bottom axis
 	chart.select('.xAxis')
 		.attr("transform", "translate(0," + height + ")")
+		.style("font-size", "9px")
 		.call(xAxis)
 
 }//end update
 
 //set up chart
-var margin = {top: 20, right: 20, bottom: 95, left: 50};
-var width = 800;
+var margin = {top: 20, right: 20, bottom: 95, left: 20};
+var width = 700;
 var height = 500;
 
 var chart = d3.select(".chart")

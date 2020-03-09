@@ -1,3 +1,8 @@
+.container{
+  display: inline-block;
+  margin: 0 auto;
+}
+
 .bar {
   fill: orange;
 }
@@ -33,4 +38,8 @@
 
 .label{
   text-anchor: middle;
+}
+
+input {
+  color: #696969;
 }
